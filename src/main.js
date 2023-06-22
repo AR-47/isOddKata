@@ -6,24 +6,26 @@
  * pseducode 
  * 
  * IF input num is not an integar
- * THEN return 'You did not give an integar'
+ * THEN return 'You did not input an integar'
  * 
  * IF input NUM modulus 2  equals 1
  * THEN return true
  * ELSE 
  * return false
  * 
- * tests:
- * input 0 -> false
- * input 132 -> false
- * input 157 -> true
- * input 9 -> true
- * input 0.5 -> 'You did not give an integar'
  */
 
 
 function isOdd(num) {
-    return
+    if (!Number.isInteger(num)) {
+        return 'You did not input an integar'
+    }
+
+    if (num % 2 === 1) {
+        return true; 
+    } else {
+        return false;
+    }
 }
 
 export { isOdd };
